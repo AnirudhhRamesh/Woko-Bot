@@ -9,9 +9,6 @@ import sqlite3
 from telegram import Bot
 import requests
 
-# Initialize the Telegram bot
-bot = Bot(token='6308543581:AAFIUJ-PZmRW5fuJ8NbTI_we8mGxAUKuZvE')
-
 # Initialize the SQLite database
 conn = sqlite3.connect('room_listings.db')
 cursor = conn.cursor()
@@ -29,8 +26,8 @@ conn.commit()
 import requests
 
 def send_notification(message):
-    TOKEN = "6308543581:AAFIUJ-PZmRW5fuJ8NbTI_we8mGxAUKuZvE"
-    CHAT_ID = 1311487583
+    TOKEN = ""
+    CHAT_ID = 0
 
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
     
